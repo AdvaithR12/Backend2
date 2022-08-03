@@ -9,9 +9,10 @@ const BookData = require('./src/model/Bookdata');
 const jsonParser = bodyParser.json()
 const path = require('path')
 
+
 app.use(express.static('./dist/frontend'))
 
-mongoose.connect("mongodb+srv://adv:adv123@cluster0.iy6ncyz.mongodb.net/?retryWrites=true&w=majority/UserData",
+mongoose.connect("mongodb+srv://adv:adv123@cluster0.iy6ncyz.mongodb.net/?retryWrites=true&w=majority/Books",
     (err) => {
         if(err) {
             console.log("Db not connecting ...");
