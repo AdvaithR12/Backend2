@@ -4,6 +4,7 @@ const bcrpyt = require('bcrypt');
 const JWT  = require('jsonwebtoken');
 const checkAuth = require('../middleware/check-auth');
 
+app.use(express.static('./dist/frontend'))
 //save data
 router.post('/api/signup', (req, res) => {
     bcrpyt.hash(req.body.password, 10, (err, hash) => {
@@ -29,7 +30,8 @@ router.post('/api/signup', (req, res) => {
     })
 })
 
-router.post('/login', (req, res) => {
+router.post('/api/login', (req, res) => {
+    console.log('test')
      User.findOne({email: req.body.email})
         .exec()
         .then((result) => {
