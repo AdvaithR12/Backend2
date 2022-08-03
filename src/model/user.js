@@ -1,7 +1,7 @@
 const mongoose  = require('mongoose');
 const Schema = mongoose.Schema;
 
-mongoose.createConnection('mongodb+srv://adv:adv123@cluster0.iy6ncyz.mongodb.net/?retryWrites=true&w=majority/Books', {
+mongoose.createConnection('mongodb+srv://adv:adv123@cluster0.iy6ncyz.mongodb.net/Books', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
