@@ -12,18 +12,12 @@ const path = require('path')
 
 app.use(express.static('./dist/frontend'))
 
-mongoose.connect("mongodb+srv://adv:adv123@cluster0.iy6ncyz.mongodb.net/?retryWrites=true&w=majority/Books",
-    (err) => {
-        if(err) {
-            console.log("Db not connecting ...");
-        }else{
-            console.log("Db connected")
-        }
-    });
 
-    app.use(cors());
+
+
+app.use(cors());
 app.use(jsonParser);
-app.use('/user', userRoutes)
+app.use('/api/user', userRoutes)
 
 
 
